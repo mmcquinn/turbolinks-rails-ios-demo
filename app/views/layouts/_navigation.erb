@@ -1,0 +1,11 @@
+<nav class="navbar navbar-light">
+  <ul class="nav navbar-nav float-xs-right">
+    <% if user_signed_in? %>
+      
+      <li class="nav-item"><%= link_to 'Settings', settings_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link', remote: true %></li>
+    <% else %>
+      <li class="nav-item"><%= link_to 'Login', new_user_session_path, class: 'nav-link' %></li>
+    <% end %>
+  </ul>
+</nav>

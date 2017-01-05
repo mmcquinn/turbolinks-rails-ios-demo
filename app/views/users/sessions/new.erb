@@ -1,0 +1,31 @@
+<h2>
+  Sign in to the App
+</h2>
+<label>
+  New here?
+  <%= link_to 'Create an Account', new_user_registration_path %>
+</label>
+
+<%# form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), remote: true) do |f| %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 actions">
+      <%= f.submit "Sign In", class: 'btn btn-primary' %>
+    </div>
+  </div>
+  </div>
+<% end %>

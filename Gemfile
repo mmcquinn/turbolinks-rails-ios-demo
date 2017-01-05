@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Needs to be at the top.
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
@@ -48,3 +50,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
+
+ gem 'devise', '~> 4.2'
+ gem 'omniauth', '~> 1.3'
+ gem 'omniauth-twitter', '~> 1.2'
