@@ -29,3 +29,14 @@
   </div>
   </div>
 <% end %>
+
+<br />
+
+<div class="container">
+  <h2>Or</h2>
+
+  <%= link_to omniauth_authorize_path(resource_name, :twitter), class: 'btn btn-block btn-secondary' do %>
+    <i class="fa fa-twitter"></i>
+    Sign in with Twitter
+  <% end %>
+</div>
