@@ -13,9 +13,16 @@ class PagesController < ApplicationController
 
   def settings
     @title = "Settings"
+    @user = current_user
   end
 
   def update_settings
-    redirect_to root_path
+    @user = current_user
+    if @user.update_attributes(params[:user].permit(:email))
+      redirect_to settings_path
+    else
+      @title = "Settings"
+      render 'settings'
+    end
   end
 end

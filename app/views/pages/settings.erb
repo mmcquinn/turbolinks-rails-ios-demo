@@ -1,10 +1,1 @@
-<%= form_tag update_settings_path, remote: true do %>
-<%# form_tag update_settings_path do %>
-
-  <div class="form-group">
-    <%= label_tag :username, "Username" %>
-    <%= text_field_tag :username, 'mike', class: 'form-control' %>
-  </div>
-
-  <%= submit_tag 'Save Settings', class: 'btn btn-primary' %>
-<% end %>
+<%= render 'form' %>
